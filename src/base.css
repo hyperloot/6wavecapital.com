@@ -1,0 +1,81 @@
+@import '../~normalize.css';
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+/* */
+
+:root {
+  --blue-color: #81A1B1;
+  --dark-green: #76AF8B;
+  --light-green: #C3DDC4;
+  --clay-color: #7A725A;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list .nav-item {
+  background: var(--light-green);
+  border-bottom: 5px solid var(--dark-green);
+  margin-left: 1px;
+  transition: background 0.1s;
+}
+
+.nav-list .nav-item.active {
+  background-color: var(--dark-green);
+}
+
+.nav-list .nav-item:hover {
+  background-color: var(--dark-green);
+}
+
+.nav-list .nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1rem;
+  line-height: 60px;
+  text-transform: uppercase;
+  padding: 30px 24px;
+}
+
