@@ -1,39 +1,39 @@
-const path = require("path");
+const path = require('path');
 // const fs = require('fs');
 // const webpack = require('webpack');
 // const fm = require('front-matter');
 // const marked = require('marked');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const IS_PROD = process.env.NODE_ENV === "production";
+const IS_PROD = process.env.NODE_ENV === 'production';
 
 // CONFIG
 const config = {
-  entry: "./src/main.js",
+  entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "/",
-    filename: "build.js",
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
+    filename: 'build.js',
   },
   module: {
     rules: [
       {
-        enforce: "post",
+        enforce: 'post',
         test: /\.css$/,
         loader: IS_PROD
           ? ExtractTextPlugin.extract({
-              fallback: "style-loader",
-              use: "css-loader",
-            })
-          : "style-loader!css-loader?sourceMap",
+            fallback: 'style-loader',
+            use: 'css-loader',
+          })
+          : 'style-loader!css-loader?sourceMap',
       },
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.(js)$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         options: {
           emitWarning: true,
           failOnError: false,
@@ -43,20 +43,20 @@ const config = {
       },
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.(png|jpg|gif|otf|eot|woff|woff2|svg|mp4|webm)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "[name].[ext]?[hash]",
+          name: '[name].[ext]?[hash]',
         },
       },
       {
         test: /\.(html)$/,
         use: {
-          loader: "html-loader",
+          loader: 'html-loader',
           options: {
             interpolate: true,
           },
@@ -65,8 +65,8 @@ const config = {
     ],
   },
   resolve: {
-    modules: ["node_modules", "src"],
-    extensions: ["*", ".js", ".json"],
+    modules: ['node_modules', 'src'],
+    extensions: ['*', '.js', '.json'],
   },
   devServer: {
     historyApiFallback: true,
@@ -76,22 +76,22 @@ const config = {
   performance: {
     hints: false,
   },
-  devtool: "#eval-source-map",
+  devtool: '#eval-source-map',
   plugins: [
-    new CopyWebpackPlugin([{ from: "public" }]),
-    new FaviconsWebpackPlugin("./src/assets/6wlogo.png"),
+    new CopyWebpackPlugin([{ from: 'public' }]),
+    new FaviconsWebpackPlugin('./src/assets/6wlogo.png'),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "src/index.ejs",
+      filename: 'index.html',
+      template: 'src/index.ejs',
       templateParameters: {
-        lang: "en",
+        lang: 'en',
       },
     }),
   ],
 };
 
 if (IS_PROD) {
-  config.plugins.push(new ExtractTextPlugin("bundle.css"));
+  config.plugins.push(new ExtractTextPlugin('bundle.css'));
 }
 
 module.exports = config;
