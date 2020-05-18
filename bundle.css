@@ -77,11 +77,6 @@ header .container {
   justify-content: space-between;
   width: 36px;
   height: 24px;
-  transition: transform 0.2s;
-}
-
-.menu:active {
-  transform: scale(0.9);
 }
 
 .menu span {
@@ -481,6 +476,17 @@ header .container {
   font-size: 20px;
   line-height: 23px;
   font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  transition: transform 0.1s;
+}
+.whatwedo-2 .content .man .linkedin:hover {
+  text-decoration: underline;
+}
+
+.whatwedo-2 .content .man .linkedin:active {
+  transform: scale(0.95);
 }
 
 .whatwedo-2 .content .man .linkedin svg {
@@ -843,34 +849,6 @@ header .container {
 
 .get .content .column .link:hover {
   color: #415763;
-}
-.arrow-link {
-  margin: 0 auto;
-}
-.arrow-link a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #fff;
-  position: relative;
-  transition: transform 0.2s;
-}
-
-.arrow-link a:focus {
-  transform: scale(0.95);
-}
-
-.arrow-link a::before {
-  content: '';
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-bottom: 2px solid #81A1B1;
-  border-left: 2px solid #81A1B1;
-  transform: rotate(-45deg);
 }
 
 @media (min-width: 320px) {
@@ -1453,6 +1431,7 @@ line-height: 28px;
     padding: 160px 0;
   }
   .get .title {
+    font-size: 26px;
     font-size: 46px;
     line-height: 54px;
   }
@@ -1474,10 +1453,6 @@ line-height: 28px;
     font-size: 28px;
     line-height: 24px;
     padding: 24px 16px;
-    transition: transform 0.2s;
-  }
-  .get .content .column .link:active {
-    transform: scale(0.9);
   }
   .get .content {
     margin-right: -50px;
