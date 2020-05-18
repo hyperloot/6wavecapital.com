@@ -477,6 +477,17 @@ header .container {
   font-size: 20px;
   line-height: 23px;
   font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  transition: transform 0.1s;
+}
+.whatwedo-2 .content .man .linkedin:hover {
+  text-decoration: underline;
+}
+
+.whatwedo-2 .content .man .linkedin:active {
+  transform: scale(0.95);
 }
 
 .whatwedo-2 .content .man .linkedin svg {
