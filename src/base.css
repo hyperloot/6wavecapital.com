@@ -833,6 +833,14 @@ header .container {
   font-size: 22px;
 }
 
+.get .content ul li a {
+  color: #fff;
+}
+
+.get .content ul li a:hover {
+  text-decoration: underline;
+}
+
 .get .content .column {
   flex-basis: 22%;
 }
