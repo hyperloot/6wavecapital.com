@@ -321,7 +321,7 @@ header .container {
 
 .about .about-content p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0.02em;
   color: #fff;
   font-weight: 300;
@@ -329,7 +329,7 @@ header .container {
 
 .about .about-content p .link {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0.02em;
   color: #fff;
   font-weight: 300;
@@ -778,9 +778,9 @@ header .container {
   background: #fff;
   border-radius: 40px;
   font-size: 28px;
-  line-height: 24px;
+  line-height: 22px;
   font-size: 28px;
-  line-height: 24px;
+  line-height: 22px;
   text-transform: uppercase;
   text-align: center;
   color: #81a1b1;
@@ -887,9 +887,9 @@ header .container {
   background: #fff;
   border-radius: 40px;
   font-size: 28px;
-  line-height: 24px;
+  line-height: 22px;
   font-size: 28px;
-  line-height: 24px;
+  line-height: 22px;
   text-transform: uppercase;
   text-align: center;
   color: #81a1b1;
@@ -940,11 +940,11 @@ header .container {
   }
   .about .about-content p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .about .about-content p .link {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
     text-decoration: underline;
   }
   .about .about-content {
@@ -1036,7 +1036,7 @@ header .container {
   }
   .history-1 .content {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .history-1 .founder {
     margin-left: 0;
@@ -1062,7 +1062,7 @@ header .container {
   }
   .history-2 .content .column p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .history-2 .subtitle {
     padding-top: 12px;
@@ -1111,7 +1111,7 @@ header .container {
   }
   .membership-2 .container p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .membership-2 .content {
     flex-direction: column;
@@ -1194,7 +1194,7 @@ header .container {
     padding: 0px;
   }
   .container {
-    padding: 100px 24px;
+    padding: 0 24px;
   }
   .about {
     background: url(/block-1.jpg?ee547de8f66c1f4eb4f3d6a64f024116) no-repeat, #437252;
@@ -1202,6 +1202,7 @@ header .container {
     background-size: 200%;
     background-repeat: no-repeat;
     padding-top: 150px;
+    padding-bottom: 100px;
   }
   .about-header {
     background: url(/shato.png?1774833ce79cdefcc797c0b85ee845cf) no-repeat;
@@ -1212,7 +1213,7 @@ header .container {
   .about .about-content {
     background: url(/shato.png?1774833ce79cdefcc797c0b85ee845cf) no-repeat;
     background-position: right 100%;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     background-size: 130px;
   }
   .about .about-content {
@@ -1223,7 +1224,7 @@ header .container {
     background-image: url(/block-2.jpg?3cb85bc68d302dc87cc55118eb8ffc9b);
   }
   .whatwedo-1 .container {
-    padding-top: 60px;
+    padding-top: 0px;
   }
   .proptect-content {
     flex-direction: row;
@@ -1267,7 +1268,7 @@ header .container {
     flex-direction: row;
   }
   .get .container {
-    padding: 80px 24px;
+    padding: 0;
   }
   .get .title {
     font-size: 26px;
@@ -1300,7 +1301,7 @@ header .container {
     max-width: 1300px;
   }
   .container {
-    padding: 100px 0;
+    padding: 0;
     max-width: 1300px;
   }
 
@@ -1312,11 +1313,11 @@ header .container {
   }
   .about .about-content p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .about .about-content p .link {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
     text-decoration: underline;
   }
 
@@ -1499,7 +1500,7 @@ header .container {
   }
   .membership-2 .link {
     font-size: 28px;
-    line-height: 24px;
+    line-height: 22px;
     margin: 70px auto 30px;
     padding: 16px 30px;
   }
@@ -1534,7 +1535,7 @@ header .container {
   }
   .get .content .column .link {
     font-size: 28px;
-    line-height: 24px;
+    line-height: 22px;
     padding: 24px 16px;
   }
   .get .content {
