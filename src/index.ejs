@@ -19,13 +19,19 @@
       <div class="container">
         <div class="logo"></div>
 
-        <a href="#nav" class="menu">
+        <a href="#desktop-nav" class="menu desktop-menu">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
-        <ul class="nav-list" id="nav">
+        <a href="#mobile-nav" class="menu mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <ul class="nav-list mobile-menu" id="mobile-nav">
           <a href="#close" class="close"></a>
 
           <li class="nav-item active">
@@ -46,6 +52,38 @@
 
           <li class="nav-item">
             <a href="#get">Get in touch</a>
+          </li>
+
+          <li>
+            <a href="https://hyperlootfoundation.typeform.com/to/QMCba0">Join Our Club</a>
+          </li>
+        </ul>
+
+        <ul class="nav-list desktop-menu" id="desktop-nav">
+          <a href="#close" class="close"></a>
+
+          <li class="nav-item">
+            <a id="moveOne" href="#1">Home</a>
+          </li>
+
+          <li id="moveTwo" id="moveOne" class="nav-item">
+            <a href="#2">What we do</a>
+          </li>
+
+          <li id="moveThree" class="nav-item">
+            <a onclick href="#3">Our history</a>
+          </li>
+
+          <li id="moveFour" class="nav-item">
+            <a href="#4">Club membership</a>
+          </li>
+
+          <li id="moveFive" class="nav-item">
+            <a href="#6">Get in touch</a>
+          </li>
+
+          <li>
+            <a href="https://hyperlootfoundation.typeform.com/to/QMCba0">Join Our Club</a>
           </li>
         </ul>
       </div>
@@ -544,6 +582,26 @@
           keyboard: true,
           responsiveFallback: false,
           direction: "vertical",
+        });
+
+        $("#moveOne").on('click', () => {
+          $("#fullpage").moveTo(1)
+        });
+
+        $("#moveTwo").on('click', () => {
+          $("#fullpage").moveTo(2)
+        });
+
+        $("#moveThree").on('click', () => {
+          $("#fullpage").moveTo(3)
+        });
+
+        $("#moveFour").on('click', () => {
+          $("#fullpage").moveTo(4)
+        });
+
+        $("#moveFive").on('click', () => {
+          $("#fullpage").moveTo(6)
         });
       }
     </script>
