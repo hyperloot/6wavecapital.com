@@ -980,49 +980,6 @@ header .container {
     font-size: 16px;
     line-height: 44px;
   }
-  .whatwedo-2 {
-    background: url('./assets/block-3-mob.jpg') no-repeat, #5C707D;
-    background-position: center top;
-    background-size: 100%;
-    padding-top: 240px;
-  }
-  .whatwedo-2 .content p.working {
-    font-size: 16px;
-    margin-top: 50px;
-  }
-  .whatwedo-2 .content p.working::before {
-    height: 2px;
-    top: -30px;
-  }
-  .whatwedo-2 .content .man {
-    height: 200px;
-    background: url("./assets/xata.png") no-repeat;
-    background-position: right top;
-    background-size: 180px;
-    padding: 30px 0 0;
-  }
-  .whatwedo-2 .content .man .name {
-    font-size: 20px;
-  }
-  .whatwedo-2 .content .man .linkedin {
-    font-size: 16px;
-  }
-  .whatwedo-2 .xata {
-    display: none;
-  }
-
-  .whatwedo-2 .content .report, .whatwedo-2 .content p, .whatwedo-2 .content ul li {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  .title-quote p {
-    font-size: 15px;
-    line-height: 20px;
-  }
-  .title-quote .author {
-    font-size: 14px;
-    font-weight: 300;
-  }
   .history-1 {
     background: url('./assets/block-4-mob.jpg') no-repeat, #7fa877;
     padding-top: 100px;
@@ -1235,22 +1192,6 @@ header .container {
     flex-direction: row;
     padding: 0 24px;
   }
-  .whatwedo-2 {
-    background: url('./assets/block-3.jpg') no-repeat, #5C707D;
-    background-position: center top;
-    background-size: cover;
-    padding-top: 100px;
-  }
-  .whatwedo-2 .content .man {
-    height: fit-content;
-    background: none;
-    padding: 12px 0 12px;
-  }
-  .whatwedo-2 .xata {
-    display: block;
-    background-size: 500px;
-    background-position: right bottom;
-  }
   .history-1 {
     background: url('./assets/block-4.jpg') no-repeat, #7fa877;
     padding-top: 60px;
@@ -1352,33 +1293,6 @@ header .container {
     line-height: 44px;
     max-width: 240px;
     margin-left: 40px;
-  }
-
-  .whatwedo-2 .content p.working {
-    font-size: 22px;
-    margin-top: 100px;
-  }
-  .whatwedo-2 .content p.working::before {
-    height: 4px;
-    top: -50px;
-  }
-  .whatwedo-2 .xata {
-    background-size: 680px;
-    height: 950px;
-    background-position: right 10%;
-  }
-  .whatwedo-2 .content .man .name {
-    font-size: 24px;
-    line-height: 28px;
-    padding-bottom: 8px;
-  }
-  .whatwedo-2 .content .man .linkedin {
-    font-size: 20px;
-  }
-
-  .whatwedo-2 .content .report, .whatwedo-2 .content p, .whatwedo-2 .content ul li {
-    font-size: 22px;
-    font-weight: 300;
   }
   .title-quote {
     max-width: 450px;
