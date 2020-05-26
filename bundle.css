@@ -201,20 +201,14 @@ header .container {
   visibility: visible;
 }
 
-.about,
-.whatwedo-1,
-.whatwedo-2,
-.history-1,
-.history-2,
-.membership-1,
-.membership-2,
-.get {
+.section-page {
   min-height: 100vh;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -235,20 +229,43 @@ header .container {
   background-image: url(/block-2.jpg?3cb85bc68d302dc87cc55118eb8ffc9b);
 }
 
-.whatwedo-2 {
-  background-image: url(/block-3.jpg?cc41df4e91c2a02e7f21a7eb207db1ea);
+.whatwedo-1 .content {
+  background: #618293;
 }
 
 .history-1 {
   background-image: url(/block-4.jpg?9223bc49e516a1cbf637a029453c27fb);
 }
 
+.history-1 .content {
+  background: #436851;
+}
+
 .history-2 {
   background-image: url(/block-5.jpg?c180ae4de423047ad1eae456b3397238);
 }
 
+.history-2 .content {
+  background: #608293;
+}
+
+.history-2 .content .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.history-2 .content .container .subtitle {
+  margin-right: auto;
+}
+
 .membership-1 {
   background-image: url(/block-6.jpg?7f191fd64e7057bf782461e0bf550a01);
+}
+
+.membership-1 .content {
+  background: #608293;
 }
 
 .membership-2 {
@@ -256,11 +273,12 @@ header .container {
   min-height: 80vh;
 }
 
-.get {
-  background-image: url(/block-8.jpg?92b1e605c23aeb35a8198a6bf53b56c2);
+.membership-2 .content {
+  background: #436851;
 }
 
-.get .title {
+.get {
+  background-image: url(/block-8.jpg?92b1e605c23aeb35a8198a6bf53b56c2);
 }
 
 .main-title {
@@ -270,7 +288,7 @@ header .container {
   color: #fff;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 50px;
+  margin-top: 80px;
 }
 
 .main-title span {
@@ -281,19 +299,18 @@ header .container {
   font-size: 44px;
   line-height: 52px;
   max-width: 560px;
+  background-color: #436851;
+  color: #fff;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.about .main-title::after,
-.history-2 .main-title::after,
-.whatwedo-1 .main-title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -48px;
-  width: 113px;
-  height: 4px;
-  background: #fff;
+.title-highlight {
+  color: #ffeebb;
 }
+
 
 .whatwedo-1 .main-title {
   max-width: 630px;
@@ -302,24 +319,57 @@ header .container {
 .history-2 .main-title {
   font-size: 44px;
   line-height: 52px;
-  margin-bottom: 100px;
+  
 }
 
+.history-2 .main-title span{
+  background: #4A6877;
+  color: #fff;
+  padding: 10px;
+}
+.history-2 .main-title span:nth-child(3) {
+  margin-left: -14px;
+}
+.history-2 .main-title .title-highlight {
+  color: #ffeebb;
+  margin-left: -1px;
+}
 .get .content {
   display: flex;
 }
 
-.about .about-content {
+.main-title-wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40%;
+  width: 100%;
 }
 
-.about .about-content .column {
+.content {
+  height: 60%;
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .content {
+  background:  #436851;
+  width: 100%;
+}
+
+.about .content .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about .column {
   flex-basis: 48%;
 }
 
-.about .about-content p {
+.about .content p {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.02em;
@@ -327,7 +377,7 @@ header .container {
   font-weight: 300;
 }
 
-.about .about-content p .link {
+.about .content p .link {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.02em;
@@ -435,7 +485,8 @@ header .container {
 .title-quote {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  align-items: flex-start;
+  margin-top: auto;
   max-width: 400px;
 }
 
@@ -456,152 +507,39 @@ header .container {
   color: #fff;
 }
 
-.whatwedo-2 .content {
-  color: #fff;
-}
-
-.whatwedo-2 .container {
-  position: relative;
-}
-
-.whatwedo-2 {
-  overflow: hidden;
-}
-
-.whatwedo-2 .content p.working {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  max-width: 900px;
-  margin-top: 100px;
-  letter-spacing: 0.02em;
-  position: relative;
-  font-weight: 300;
-}
-
-.whatwedo-2 .content p.working::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 113px;
-  height: 4px;
-  background: #fff;
-}
-
-.whatwedo-2 .xata {
-  background: url(/xata.png?a614a19f54509b2b57504d6de1ab500b) no-repeat;
-  background-position: center;
-  background-size: contain;
-  position: absolute;
-  width: 700px;
-  height: 800px;
-  right: -260px;
-  bottom: -180px;
-}
-
-.whatwedo-2 .content .man {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 30px;
-}
-
-.whatwedo-2 .content .man .name {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  padding-bottom: 8px;
-}
-
-.whatwedo-2 .content .man .linkedin {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  line-height: 23px;
-  font-weight: 300;
-  text-decoration: none;
-  color: #fff;
-  width: 100px;
-  transition: transform 0.1s;
-}
-.whatwedo-2 .content .man .linkedin:hover {
-  text-decoration: underline;
-}
-
-.whatwedo-2 .content .man .linkedin:active {
-  transform: scale(0.95);
-}
-
-.whatwedo-2 .content .man .linkedin svg {
-  margin-right: 11px;
-}
-
-.whatwedo-2 .content .report {
-  font-size: 22px;
-  line-height: 26px;
-  padding: 12px 0 0;
-  font-weight: 300;
-}
-
-.whatwedo-2 .content .report span {
-  font-weight: bold;
-  color: #ffeebb;
-}
-
-.whatwedo-2 .content p {
-  font-size: 22px;
-  line-height: 26px;
-  letter-spacing: 0.02em;
-  font-weight: 300;
-}
-
-.whatwedo-2 .content ul {
-  padding-left: 24px;
-  max-width: 650px;
-}
-
-.whatwedo-2 .content ul li {
-  font-size: 22px;
-  line-height: 26px;
-  padding: 6px 0;
-}
-
-.whatwedo-2 .content ul li span {
-  font-weight: bold;
-  color: #ffeebb;
-}
-
 .history-1 .content {
   color: #fff;
   font-weight: 300;
   font-size: 24px;
   line-height: 28px;
-  max-width: 1000px;
   margin-top: 60px;
   position: relative;
 }
 .history-1 .title-quote {
   max-width: 760px;
 }
-.history-1 .title-quote p {
+.history-1 .title-quote span {
   font-size: 30px;
-  line-height: 40px;
-  margin-bottom: 10px;
+  line-height: 32px;
   font-weight: bold;
+  background: #436851;
+  padding: 6px;
 }
 .history-1 .title-quote .author {
-  font-weight: 300;
-  font-size: 28px;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: capitalize;
+  padding: 10px;
+  font-weight: normal;
+  padding-top: 0;
 }
 
-.history-1 .content:before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 0;
-  width: 113px;
-  height: 4px;
-  background: #fff;
+.history-1 .main-title-wrapper {
+  align-items: flex-end;
+}
+
+.history-1 .main-title {
+  margin-top: 140px;
 }
 
 .history-1 .founder {
@@ -660,7 +598,7 @@ header .container {
 }
 
 .membership-1 .title-quote {
-  max-width: 680px;
+  max-width: 660px;
 }
 
 .membership-1 .title-quote p {
@@ -692,50 +630,43 @@ header .container {
   position: relative;
 }
 
-.membership-1 .content::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 113px;
-  height: 4px;
-  background: #fff;
-}
-
 .membership-1 .content .content-title {
   font-size: 28px;
+  font-weight: bold;
 }
-
+.membership-1 .content p {
+  font-size: 16px;
+}
+.membership-2 .main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .membership-2 .title {
   font-weight: bold;
   font-size: 44px;
   line-height: 52px;
   text-transform: uppercase;
+  display: inline;
   color: #fff;
-  text-align: center;
+  background-color: #436851;
+  padding: 6px;
 }
 
+
+
 .membership-2 .subtitle {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 20px;
   line-height: 33px;
-  text-align: center;
   letter-spacing: 0.02em;
   font-weight: 300;
   color: #fff;
-  position: relative;
-}
-
-.membership-2 .subtitle::after {
-  position: absolute;
-  content: "";
-  width: 113px;
-  height: 4px;
-  background: #fff;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: inline;
+  background-color: #436851;
+  padding: 6px;
+  margin-top: -10px;
 }
 .membership-2 .container {
   max-width: 800px;
@@ -814,25 +745,19 @@ header .container {
   text-transform: uppercase;
   color: #fff;
   position: relative;
-  margin-bottom: 100px;
+  background: #4A6877;
+  padding: 6px 10px;
+  max-width: 330px;
+  margin: 0 auto 100px;
 }
 
-.get .title::after {
-  position: absolute;
-  content: "";
-  width: 113px;
-  height: 4px;
-  background: #fff;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 .get .container {
   padding: 200px 0;
 }
 .get .content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   color: #ffffff;
   margin-right: -50px;
 }
@@ -864,7 +789,7 @@ header .container {
 }
 
 .get .content .column {
-  flex-basis: 22%;
+  flex-basis: 20%;
 }
 
 .get .content .column p {
@@ -929,9 +854,8 @@ header .container {
   .about {
     background: url(/block-1.jpg?ee547de8f66c1f4eb4f3d6a64f024116) no-repeat, #437252;
     background-position: center 80px;
-    background-size: 200%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    padding-top: 150px;
   }
   .about-header {
     background: url(/shato.png?1774833ce79cdefcc797c0b85ee845cf) no-repeat;
@@ -1011,22 +935,18 @@ header .container {
   .history-2 .main-title {
     font-size: 25px;
     line-height: 36px;
-    margin-bottom: 50px;
-  }
-  .about .main-title::after, .history-2 .main-title::after, .whatwedo-1 .main-title::after {
-    height: 2px;
-    bottom: -30px;
+    margin-top: 70px;
   }
   .history-2 .content .column p {
     font-size: 16px;
     line-height: 22px;
   }
   .history-2 .subtitle {
-    padding-top: 12px;
+    padding-top: 24px;
     font-size: 14px;
   }
   .membership-1 .container {
-    padding: 80px 24px;
+    padding: 24px;
     font-size: 16px;
   }
   .membership-1 .title-quote {
@@ -1039,10 +959,6 @@ header .container {
   }
   .membership-1 .content {
     margin-top: 50px;
-  }
-  .membership-1 .content::before {
-    top: -30px;
-    height: 2px;
   }
   .membership-1 .container ul {
     flex-direction: column;
@@ -1062,16 +978,15 @@ header .container {
   .membership-2 .subtitle {
     font-size: 16px;
   }
-  .membership-2 .subtitle::after {
-    height: 2px;
-    bottom: -15px;
-  }
   .membership-2 .container p {
     font-size: 16px;
     line-height: 22px;
   }
   .membership-2 .content {
     flex-direction: column;
+  }
+  .membership-2 .content-cols {
+    display: flex;
   }
   .membership-2 .content .column ul {
     margin: 0;
@@ -1156,10 +1071,8 @@ header .container {
   .about {
     background: url(/block-1.jpg?ee547de8f66c1f4eb4f3d6a64f024116) no-repeat, #437252;
     background-position: center 80px;
-    background-size: 200%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    padding-top: 150px;
-    padding-bottom: 100px;
   }
   .about-header {
     background: url(/shato.png?1774833ce79cdefcc797c0b85ee845cf) no-repeat;
@@ -1219,7 +1132,7 @@ header .container {
     flex-wrap: nowrap;
   }
   .get .content .column {
-    flex-basis: 22%;
+    flex-basis: 20%;
     padding-bottom: 30px;
   }
 }
@@ -1237,9 +1150,6 @@ header .container {
   }
   header {
     height: 80px;
-  }
-  .whatwedo-2 .container {
-    max-width: 1300px;
   }
   .container {
     padding: 0;
@@ -1333,12 +1243,7 @@ header .container {
   .history-2 .main-title {
     font-size: 44px;
     line-height: 52px;
-    margin-bottom: 100px;
-    max-width: 870px;
-  }
-  .about .main-title::after, .history-2 .main-title::after, .whatwedo-1 .main-title::after {
-    height: 5px;
-    bottom: -50px;
+    max-width: 890px;
   }
   .history-2 .content .column p {
     font-size: 18px;
@@ -1349,25 +1254,30 @@ header .container {
     line-height: 23px;
   }
   .membership-1 .container {
-    padding: 80px 24px;
+    padding: 24px;
     font-size: 18px;
   }
   .membership-1 .title-quote {
     max-width: 680px;
+  
   }
-  .membership-1 .title-quote p {
+  .membership-1 .title-quote span {
     font-size: 44px;
     line-height: 52px;
-    margin-bottom: 10px;
+    background: #4A6877;
+    padding: 10px;
+  }
+  .membership-1 .title-quote span.author {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: capitalize;
+    padding: 10px;
+    margin-top: -12px;
   }
   .membership-1 .content {
     margin-top: 100px;
     font-size: 18px;
     line-height: 26px;
-  }
-  .membership-1 .content::before {
-    top: -50px;
-    height: 4px;
   }
   .membership-1 .container ul {
     flex-direction: row;
@@ -1376,11 +1286,11 @@ header .container {
   }
   .membership-1 .container ul li {
     padding: 6px 0;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
   }
   .membership-1 .content .content-title {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
   }
   .membership-2 .title {
@@ -1390,37 +1300,34 @@ header .container {
   .membership-2 .subtitle {
     font-size: 28px;
     line-height: 33px;
-    padding-bottom: 24px;
-  }
-  .membership-2 .subtitle::after {
-    height: 4px;
-    bottom: -15px;
   }
   .membership-2 .container {
     padding: 100px 0;
-    max-width: 900px;
+    max-width: 950px;
   }
   .membership-2 .container p {
     font-size: 22px;
-    line-height: 26px;
+    line-height: 20px;
+    margin: 6px 0;
   }
   .membership-2 .content .column ul {
     margin: 0;
   }
   .membership-2 .content .column ul li {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     padding: 12px 0;
   }
   .membership-2 .link {
     font-size: 28px;
     line-height: 22px;
-    margin: 70px auto 30px;
+    margin: 20px auto 10px;
     padding: 16px 30px;
   }
   .membership-2 .sublink {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 23px;
+    font-weight: 300;
   }
   .get {
     background-position: center;
